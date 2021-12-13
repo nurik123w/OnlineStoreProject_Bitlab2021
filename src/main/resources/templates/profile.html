@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/layout">
+<body>
+
+    <div layout:fragment="content">
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                        <img class="rounded-circle mt-5" width="150px"  src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg">
+                        <span class="font-weight-bold" th:text="${currentUser.fullName}"></span><span class="text-black-50"  th:text="${currentUser.email}"></span><span> </span>
+                    </div>
+                </div>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="text-right" th:text="#{label.profile}"></h4>
+                                </div>
+                        <form th:action="@{'/save'}" method="post">
+                                <div class="row mt-2">
+                                    <div class="col-md-6"><label class="labels"  th:text="#{label.fullName}"></label>
+                                        <input type="text" class="form-control"  name="user_full_name" placeholder="full name" th:value="${currentUser.fullName}">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12"><label class="labels" th:text="#{label.phoneNum}"></label>
+                                        <input type="number" class="form-control"  min="0"  name="phone_num" th:value="${currentUser.phoneNum!='0'?currentUser.phoneNum:null}" placeholder="enter phone number"  >
+                                    </div>
+                                    <div class="col-md-12"><label class="labels" th:text="#{label.address}"></label>
+                                        <input type="text" class="form-control" name="address_line"  placeholder="enter address line " th:value="${currentUser.address!='0'?currentUser.address:null}">
+                                    </div>
+                                    <div class="col-md-12"><label class="labels" th:text="#{label.postal}"></label>
+                                        <input type="text" class="form-control" name="postalCode"  placeholder="enter postal code" th:value="${currentUser.postalCode!=0?currentUser.postalCode:null}">
+                                    </div>
+                                </div>
+                                <div class="mt-5 text-center">
+                                    <button class="btn btn-primary profile-button" type="submit" th:text="#{label.save}"> </button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 py-5">
+                        <form th:action="@{'/changePass'}" method="post">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="text-right" th:text="#{label.changePass}"></h4>
+                            </div>
+                            <div class="form-group">
+                                <label th:text="#{label.newPassword}"> </label>
+                                <input type="password" class="form-control" name="user_password" required>
+                            </div>
+                            <div class="form-group">
+                                <label th:text="#{label.retype}"></label>
+                                <input type="password" class="form-control" name="re_user_password" required>
+                            </div>
+                            <button class="btn btn-primary profile-button" type="submit" th:text="#{label.save}"> </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>

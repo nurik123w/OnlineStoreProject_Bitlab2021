@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"   layout:decorate="layouts/adminLayout">
+
+<body>
+
+<div layout:fragment="content">
+
+    <form th:action="@{/admin/addCategory}"  method="post">
+        <div class="update-list ">
+            <div class="update-list__image ">
+                <img class="img-thumbnail " src="https://www.free-mockup.com/wp-content/uploads/edd/2020/05/Free-Apple-Multi-Device-Mockup-Top-View-600x450.jpg" alt="prod">
+            </div>
+            <div class="update-list__content">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Category name</label>
+                    <input type="text" class="form-control"  name="name" id="exampleFormControlInput1" placeholder="Category name">
+                </div>
+                <button class="btn btn-lg btn-primary">Add Category</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>

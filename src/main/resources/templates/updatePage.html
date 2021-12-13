@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"   layout:decorate="layouts/adminLayout">
+
+<body>
+
+    <div layout:fragment="content">
+
+            <form th:action="@{/admin/{id}(id=${item.id})}"  method="post">
+                <div class="update-list ">
+                    <div class="update-list__image ">
+                        <img class="img-thumbnail " th:src="${item.img}" alt="">
+                    </div>
+                    <div class="update-list__content">
+                        <div class="mb-3 ">
+                            <label for="exampleFormControlInput1" class="form-label">Product name</label>
+                            <input type="text" class="form-control" th:value="${item.name}" name="name" id="exampleFormControlInput1" placeholder="product name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="details1" class="form-label">Details</label>
+                            <textarea class="form-control" id="details1" th:text="${item.details}" name="details"
+                                      placeholder="Detail">
+
+                            </textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price1" class="form-label">Price</label>
+                            <input min="0" max="1000000000" type="number" class="form-control" th:value="${item.price}" id="price1" name="price" placeholder="TENGE">
+                        </div>
+                        <div class="mb-3">
+                            <label for="device" class="form-label">Device</label>
+                            <select class="form-control" name="type" id="device">
+                                <option value="DESKTOP" th:text="DESKTOP" th:selected="${item.type!=null?item.type=='DESKTOP':false}"></option>
+                                <option th:value="${item.type}" th:text="${item.type}"></option>
+                                <option value="PERIPHERY" th:text="PERIPHERY" th:selected="${item.type!=null?item.type=='PERIPHERY':false}"></option>
+                                <option value="TV" th:text="TV" th:selected="${item.type!=null?item.type=='TV':false}"></option>
+                                <option value="LAPTOP" th:text="LAPTOP" th:selected="${item.type!=null?item.type=='LAPTOP':false}"></option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="brand" class="form-label">Brand</label>
+                            <select class="form-control" name="brand_id" id="brand">
+                                <option th:each="brand :${brandList}" th:value="${brand.id}" th:text="${brand.name}+'~'+${brand.country}"
+                                        th:selected="${brand!=null?brand.id==item.brand.id:'----'}">
+
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select class="form-control" name="category_id" id="category">
+                                <option th:each="category :${categoryList}" th:value="${category.id}" th:text="${category.name}" th:selected="${category!=null?category.id==item.categories.id:'-----'}"> </option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="url1" class="form-label">Photo</label>
+                            <input type="text" class="form-control" th:value="${item.img}" id="url1" name="img" placeholder="img">
+                        </div>
+                        <button class="btn btn-lg btn-primary">Update</button>
+                        <a th:href="@{/admin/{id}(id=${item.getId()})}" class="btn btn-lg btn-danger">Delete</a>
+                    </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"   layout:decorate="layouts/adminLayout">
+
+<body>
+
+<div layout:fragment="content">
+
+    <form th:action="@{/admin/addItem}"  method="post">
+        <div class="update-list ">
+            <div class="update-list__image ">
+                <img class="img-thumbnail " src="https://www.free-mockup.com/wp-content/uploads/edd/2020/05/Free-Apple-Multi-Device-Mockup-Top-View-600x450.jpg" alt="prod">
+            </div>
+            <div class="update-list__content">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product name</label>
+                    <input type="text" class="form-control"  name="name" id="exampleFormControlInput1" placeholder="product name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="details1" class="form-label">Details</label>
+                    <textarea class="form-control" id="details1"  name="details"  placeholder="Detail"> </textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="price1" class="form-label">Price</label>
+                    <input min="0" max="1000000000" type="number" class="form-control"  id="price1" name="price" placeholder="$">
+                </div>
+                <div class="mb-3">
+                    <label for="device" class="form-label">Device</label>
+                    <select class="form-control" name="type" id="device " required>
+                        <option disabled selected hidden style="font-size: 5px">Choose device</option>
+                        <option value="DESKTOP" >DESKTOP</option>
+                        <option value="PERIPHERY">PERIPHERY</option>
+                        <option value="TV">TV</option>
+                        <option value="LAPTOP">LAPTOP</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="brand" class="form-label">Brand</label>
+                    <select class="form-control" name="brand_id" id="brand" required>
+                        <option disabled selected hidden style="font-size: 5px">Choose the brand</option>
+                        <option th:each="brand :${brandList!=null?brandList:null}" th:value="${brand.id!=null?brand.id:'--'}" th:text="${brand.name!=null?brand.name:'--'}+'~'+${brand.country!=null?brand.country:'--'}"></option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-control" name="category_id" id="category" required>
+                        <option disabled selected hidden style="font-size: 5px">Choose category</option>
+                        <option th:each="category :${categoryList}" th:value="${category.id}" th:text="${category.name}" > </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="url1" class="form-label">Photo</label>
+                    <input type="text" class="form-control"  id="url1" name="img" placeholder="img">
+                </div>
+                <button class="btn btn-lg btn-primary">ADD ITEM</button>
+            </div>
+          </div>
+        </form>
+
+        </div>
+
+
+</body>
+</html>

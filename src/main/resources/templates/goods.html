@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/layout">
+
+<body>
+
+<div layout:fragment="content">
+
+
+
+
+    <div class="container position-relative">
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a th:href="@{/}" th:text="#{label.home}"></a></li>
+            <li class="breadcrumb-item active" aria-current="page" th:text="#{label.goods}"></li>
+          </ol>
+        </nav>
+
+        <div class="sort" >
+          <span class="text-muted opacity-75" th:text="#{label.sortBy}"></span>
+          <select id="scale-id" class="form-select mt-1 " onchange="sort($('mfc-id').val(),this.value)" style="font-size: 14px" >
+            <option disabled selected hidden  th:text="#{label.sortMethod}"></option>
+            <option value="1" th:text="#{label.lowest}" ></option>
+            <option value="2" th:text="#{label.highest}"> </option>
+          </select>
+        </div>
+
+        <div class="goods d-flex mt-5" >
+
+                <div class="goods__left_bar">
+                        <div class="card shadow" style="width: 18rem;">
+                            <div class="card-body ">
+                                 <label class="my-3 fw-bold fs-4" th:text="#{label.price}"></label><br>
+                                <input id="from" min="0" name="from" class="form-control " style="width: 48%" type="number" th:placeholder="#{label.from}">
+                                <input id="till" name="till" class="form-control " type="number"  style="width: 48%" th:placeholder="#{label.till}">
+                                <button  onclick="sort($('mfc-id').val(),$('scale-id').val())"  class="btn btn-primary btn mt-2 w-100" th:text="#{label.sort}"></button>
+                            </div>
+                       </div>
+                        <div class="card shadow" style="width: 18rem;">
+                          <div class="card-body ">
+                            <h2 th:text="#{label.brand}"></h2>
+                            <select id="mfc-id" class="form-select mt-4" onchange="sort(this.value,$('scale-id').val())">
+                                <option  disabled selected hidden style="font-size: 5px" th:text="#{label.manufacturer}"></option>
+                                <option th:each="brand : ${brandList}" th:value="${brand.id}" th:text="${brand.name+'~'+brand.country}"></option>
+                            </select>
+                          </div>
+                        </div>
+                </div>
+
+                <div  class="row row-cols-1 row-cols-md-3 g-4 good__list" id="sortOut">
+                        <div th:each="item : ${itemList}" class="col">
+                            <div class="card h-100">
+                                <div  class="img__div p-3">
+                                    <img th:src="${item.img}" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body p-3">
+                                    <input  th:id="${item.id}" type="hidden" th:value="${item.id}">
+                                    <a class="link-warning" th:href="@{/details/{id}(id=${item.id})}">
+                                        <h5 class="card-title" th:text="${item.name}"></h5>
+                                    </a>
+                                    <p class="card-text text-muted" th:text="${item.details}"></p>
+                                </div>
+                                <div  style="background-color: white; padding-bottom: 15px ;text-align: center">
+                                    <p class="fw-bold fs-3" th:text="${item.price+' $'}"></p>
+                                    <a th:onclick="'basket('+${item.id}+')'" onclick="document.getElementById('liveToastBtn').click()"  class="btn btn-outline-primary btn-lg" th:text="#{label.basket}"></a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            <input id="ctg" type="hidden" th:value="${category}">
+            <input id="type" type="hidden" th:value="${type}">
+         </div>
+
+     </div>
+
+
+
+
+    <!-- Button trigger modal -->
+    <button hidden type="button" id="modal-trigger" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">NO PRODUCT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" th:text="#{label.noProd}">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" th:text="#{label.gotIt}"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

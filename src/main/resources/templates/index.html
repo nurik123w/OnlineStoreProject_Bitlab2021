@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<body>
+
+<div layout:fragment="content">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://static.vecteezy.com/system/resources/previews/002/262/057/non_2x/11-11-global-shopping-sale-horizontal-banner-or-promotion-on-violet-background-online-shopping-illustration-vector.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.vecteezy.com/system/resources/previews/003/690/391/large_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-pink-backgroud-for-banner-market-ecommerce-women-concept-free-vector.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.vecteezy.com/system/resources/previews/002/006/967/non_2x/young-women-takes-a-shopping-cart-and-enjoy-online-shopping-through-smartphones-choose-to-buy-gifts-valentine-s-day-concepts-website-or-mobile-phone-application-flat-design-illustration-vector.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<main>
+  <div class="container">
+      <div class="title">
+          <h2 style="font-family: 'Anton', sans-serif;" th:text="#{label.category}"></h2>
+      </div>
+      <div class="category">
+
+          <div class="category__desktop desktop">
+              <div class="desktop__content">
+                  <div class="desktop__title">
+                    <span th:text="#{label.desktop}"></span>
+                  </div>
+                  <div class="desktop__specification">
+                    <a th:href="@{/goods/{type}/{category}(type='DESKTOP',category='Gaming')}" class="btn btn-outline-warning btn-sm" th:text="#{label.gaming}"></a><br>
+                    <a th:href="@{/goods/{type}/{category}(type='DESKTOP',category='Office')}" class="btn btn-outline-warning btn-sm" th:text="#{label.office}"></a><br>
+                    <a th:href="@{/goods/{type}/{category}(type='DESKTOP',category='Exclusive')}" class="btn btn-outline-warning btn-sm" th:text="#{label.exclusive}"></a>
+                  </div>
+              </div>
+              <div class="desktop__img">
+                  <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1617287240-lenovo-desktop-pc-1617287223.jpg" alt="">
+              </div>
+          </div>
+
+          <div class="category__laptop laptop">
+                <div class="laptop__content">
+                      <div class="laptop__title">
+                        <span th:text="#{label.laptop}"> </span>
+                      </div>
+                      <div class="laptop__specification">
+                        <a th:href="@{/goods/{type}/{category}(type='LAPTOP',category='Gaming')}" class="btn btn-outline-warning btn-sm" th:text="#{label.gaming}"></a><br>
+                        <a th:href="@{/goods/{type}/{category}(type='LAPTOP',category='Office')}" class="btn btn-outline-warning btn-sm" th:text="#{label.office}"></a><br>
+                        <a th:href="@{/goods/{type}/{category}(type='LAPTOP',category='Ultrabook')}" class="btn btn-outline-warning btn-sm" th:text="#{label.ultrabook}"></a>
+                      </div>
+                </div>
+                <div class="laptop__img">
+                  <img src="https://m.media-amazon.com/images/I/71YsF5seP6L._AC_SY450_.jpg"
+                    alt="">
+                </div>
+          </div>
+
+          <div class="category__periphery periphery ">
+            <div class="periphery__content">
+              <div class="periphery__title">
+                <span th:text="#{label.periphery}"></span>
+              </div>
+              <div class="periphery__specification ">
+                <a th:href="@{/goods/{type}/{category}(type='PERIPHERY',category='Web-cam')}" class="btn btn-outline-warning btn-sm" th:text="#{label.Webcam}"></a><br>
+                <a th:href="@{/goods/{type}/{category}(type='PERIPHERY',category='Mouse')}" class="btn btn-outline-warning btn-sm" th:text="#{label.mouse}"></a>
+                <a th:href="@{/goods/{type}/{category}(type='PERIPHERY',category='Printer')}" class="btn btn-outline-warning btn-sm" th:text="#{label.printer}"></a>
+                <a th:href="@{/goods/{type}/{category}(type='PERIPHERY',category='Headset')}" class="btn btn-outline-warning btn-sm" th:text="#{label.headset}"></a>
+                <a th:href="@{/goods/{type}/{category}(type='PERIPHERY',category='Keyboard')}" class="btn btn-outline-warning btn-sm" th:text="#{label.keyboard}"></a>
+              </div>
+            </div>
+            <div class="periphery__img">
+              <img src="https://assets2.razerzone.com/images/pnx.assets/773d171905a88680ec195e13d71e4546/500x500-deathadderv2pro.png" alt="">
+            </div>
+          </div>
+
+            <div class="category__tv tv ">
+              <div class="tv__content">
+                <div class="tv__title">
+                  <span th:text="#{label.tv}"></span>
+                </div>
+                <div class="tv__specification ">
+                  <a th:href="@{/goods/{type}/{category}(type='TV',category='Tv')}" class="btn btn-outline-warning btn-sm" th:text="#{label.tv}"></a><br>
+                  <a th:href="@{/goods/{type}/{category}(type='TV',category='Remote-controller')}" class="btn btn-outline-warning btn-sm" th:text="#{label.rc}"></a>
+                  <a th:href="@{/goods/{type}/{category}(type='TV',category='Monitor')}" class="btn btn-outline-warning btn-sm" th:text="#{label.Monitor}"></a><br>
+                </div>
+              </div>
+              <div class="tv__img">
+                <img 
+                  src="https://www.kz.sony.ru/image/0e614d566f11f2bac75a48b230d142fe?fmt=png-alpha&wid=720"
+                  alt="">
+                </div>
+            </div>
+      </div>
+  </div>
+</main>
+</div>
+</body>
+</html>

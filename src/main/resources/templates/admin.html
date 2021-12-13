@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"   layout:decorate="layouts/adminLayout">
+
+
+<body >
+
+
+
+
+    <div class="update-list" layout:fragment="content">
+
+        <table class="table tt ">
+            <thead >
+            <tr>
+                <td>ID</td>
+                <td>img</td>
+                <td>name</td>
+                <td>description</td>
+                <td>price</td>
+                <td>actual</td>
+                <td>details</td>
+            </tr>
+            </thead>
+            <tbody class="tbodyt" th:each="item:${itemList}" >
+            <tr >
+                <td ><div th:text="${item.id}"></div></td>
+                <td><div><img th:src="${item.img}" alt="prod"></div></td>
+                <td>
+                    <div th:text="${item.name}" style="font-size: 13px;color: darkred;font-weight: bolder"></div>
+                </td>
+                <td>
+                    <div class="text-muted" style="font-size: 10px" th:text="${item.details}"></div>
+                </td>
+                <td>
+                    <div class="fw-bold" th:text="${item.price+' $'}"></div>
+                </td>
+                <td>
+                    <div th:if="${item.isActual()}">Actual</div>
+                    <div th:unless="${item.isActual()}">Deleted</div>
+                </td>
+                <td>
+                    <div>
+                        <a th:href="@{/admin/{id}/update(id=${item.getId()})}" class="btn btn-primary btn-sm">detail</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
