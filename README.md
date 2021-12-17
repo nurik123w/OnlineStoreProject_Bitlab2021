@@ -9,5 +9,5 @@
 
 in order to log in as a admin use this account :  admin@mail.ru    password: ss ; 
 
-### Link to web site itself :  https://github.com/nurik123w/OnlineStoreProject_Bitlab2021;
+### Link to web site itself : https://online-store-project-app.herokuapp.com;
 
