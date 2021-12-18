@@ -44,7 +44,11 @@ Or visit website https://online-store-project-app.herokuapp.com.
 
 
 
-https://user-images.githubusercontent.com/46224934/146655130-bc1218dd-29e6-4cd2-89dd-fdfb0396f543.mov
+https://user-images.githubusercontent.com/46224934/146655130-bc1218dd-29e6-4cd2-89dd-fdf
+
+https://user-images.githubusercontent.com/46224934/146655269-6dcebf2a-d7c1-4186-8281-71ccf04a4767.mov
+
+b0396f543.mov
 
 
 
