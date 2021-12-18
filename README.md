@@ -29,5 +29,14 @@ Or visit website https://online-store-project-app.herokuapp.com.
 
 > in order to log in as an admin use this account :  admin@mail.ru    password: ss .
 
+# Next Updates
+
+- Advanced search
+- Adaptive layout
+- Spring Security oauth 2.0
+- Buying product
+- Managing registered accounts on admin panel
+- Assigning roles to users (Moderator)
+- Design update
 
 
