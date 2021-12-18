@@ -2,9 +2,9 @@
 
 # Introduction
 
-This E-commerce project built on Spring Boot.&nbsp
-Deployed on heroku.com.&nbsp
-Look demo below.&nbsp
+This E-commerce project built on Spring Boot. &nbsp
+Deployed on heroku.com. &nbsp
+Look demo below. &nbsp
 
 Or visit website https://online-store-project-app.herokuapp.com.
 
