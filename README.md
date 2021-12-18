@@ -27,7 +27,7 @@ Or visit website https://online-store-project-app.herokuapp.com.
 - Customers can change their password.
 - Admin and Moderator can add or modify product.
 
-In order to log in as a admin use this account :  admin@mail.ru    password: ss ; 
+> in order to log in as an admin use this account :  admin@mail.ru    password: ss .
 
 
 
