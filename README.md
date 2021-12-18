@@ -1,6 +1,6 @@
 # OnlineStoreProject_Bitlab2021
 
-#Introduction
+# Introduction
 
 This E-commerce project built on Spring Boot.
 Deployed on heroku.com.
@@ -10,17 +10,17 @@ Or visit website https://online-store-project-app.herokuapp.com.
 Login: admin 
 Password: admin
 
-#Used Technologies:
+# Used Technologies:
 
-Spring (Boot, Data, Security)
-JPA / Hibernate
-PostgreSQL
-Thymeleaf
-Bootstrap, CSS
-Maven
-Lombok, slf4j
+- Spring (Boot, Data, Security)
+- JPA / Hibernate
+- PostgreSQL
+- Thymeleaf
+- Bootstrap, CSS
+- Maven
+- Lombok, slf4j
 
-#About This Project
+# About This Project
 
 Customers can register / log in.
 Customers can navigate on the main pages browse products or select an item from the showcase and preview.
