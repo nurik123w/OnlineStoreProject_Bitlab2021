@@ -2,13 +2,12 @@
 
 # Introduction
 
-This E-commerce project built on Spring Boot.
-Deployed on heroku.com.
-Look demo below.
+This E-commerce project built on Spring Boot.&nbsp
+Deployed on heroku.com.&nbsp
+Look demo below.&nbsp
 
 Or visit website https://online-store-project-app.herokuapp.com.
-Login: admin 
-Password: admin
+
 
 # Used Technologies:
 
@@ -24,7 +23,7 @@ Password: admin
 
 - Customers can register / log in.
 - Customers can navigate on the main pages browse products or select an item from the showcase and preview.
-- Customers can search for the product according to the specified criteria.
+- Customers can filter the product according to the specified criteria.
 - Customers can add products to the shopping cart and delete products from the shopping cart.
 - Customers can change their password.
 - Admin and Moderator can add or modify product.
