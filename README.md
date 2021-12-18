@@ -5,7 +5,6 @@
 This E-commerce project built on Spring Boot.  <br/>
 Deployed on heroku.com.  
 Look demo below.  
-
 Or visit website https://online-store-project-app.herokuapp.com.
 
 
