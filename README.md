@@ -1,13 +1,35 @@
 # OnlineStoreProject_Bitlab2021
-- On this project I was mainly focusing on a backend side;
-- Technologies that I have used were Spring Framework, Java, JavaScript, JQuery, PostgreSQL;
-- With the help of Spring Security u can Log in or get registrated;
-- There are three types of role models (Admin, User and Moderator);
-- Admin and Moderator can have an access to enter admin panel , where he can add an item, brand or category, whilist user don't have an access;
+
+#Introduction
+
+This E-commerce project built on Spring Boot.
+Deployed on heroku.com.
+Look demo below.
+
+Or visit website https://online-store-project-app.herokuapp.com.
+Login: admin 
+Password: admin
+
+#Used Technologies:
+
+Spring (Boot, Data, Security)
+JPA / Hibernate
+PostgreSQL
+Thymeleaf
+Bootstrap, CSS
+Maven
+Lombok, slf4j
+
+#About This Project
+
+Customers can register / log in.
+Customers can navigate on the main pages browse products or select an item from the showcase and preview.
+Customers can search for the product according to the specified criteria.
+Customers can add products to the shopping cart and delete products from the shopping cart.
+Customers can change their password.
+Admin and Moderator can add or modify product.
+
+In order to log in as a admin use this account :  admin@mail.ru    password: ss ; 
 
 
-
-in order to log in as a admin use this account :  admin@mail.ru    password: ss ; 
-
-### Link to web site itself : https://online-store-project-app.herokuapp.com;
 
