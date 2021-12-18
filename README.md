@@ -55,6 +55,11 @@ https://user-images.githubusercontent.com/46224934/146655356-7bbe3a1e-f1b2-4547-
 https://user-images.githubusercontent.com/46224934/146655380-3bb3bd47-0815-4fe8-9cf3-3bcf60fa5eaf.mov
 
 
+# Screenshots
+
+<img width="1439" alt="Снимок экрана 2021-12-19 в 03 02 14" src="https://user-images.githubusercontent.com/46224934/146655420-29bc5002-a1e1-4007-9c55-cab59bc32c06.png">
+
+<img width="1438" alt="Снимок экрана 2021-12-19 в 03 02 37" src="https://user-images.githubusercontent.com/46224934/146655423-118bcf70-400b-41ed-82fd-28629788f668.png">
 
 
 
