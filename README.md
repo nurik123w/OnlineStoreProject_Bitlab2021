@@ -40,4 +40,11 @@ Or visit website https://online-store-project-app.herokuapp.com.
 - Assigning roles to users (Moderator).
 - Design update.
 
+# Demo
+
+
+
+https://user-images.githubusercontent.com/46224934/146655130-bc1218dd-29e6-4cd2-89dd-fdfb0396f543.mov
+
+
 
