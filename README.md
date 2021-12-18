@@ -22,12 +22,12 @@ Password: admin
 
 # About This Project
 
-Customers can register / log in.
-Customers can navigate on the main pages browse products or select an item from the showcase and preview.
-Customers can search for the product according to the specified criteria.
-Customers can add products to the shopping cart and delete products from the shopping cart.
-Customers can change their password.
-Admin and Moderator can add or modify product.
+- Customers can register / log in.
+- Customers can navigate on the main pages browse products or select an item from the showcase and preview.
+- Customers can search for the product according to the specified criteria.
+- Customers can add products to the shopping cart and delete products from the shopping cart.
+- Customers can change their password.
+- Admin and Moderator can add or modify product.
 
 In order to log in as a admin use this account :  admin@mail.ru    password: ss ; 
 
